@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #ddd;
+}
+.container {
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+h2.h {
+  color: #ff6384;
+}
+
+h2.c {
+  color: #36a2eb;
+}
+
+.app {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 80px);
+}
+
+.game {
+  position: relative;
+}
+.game > div {
+  position: absolute;
+}
+
+.dot {
+  border-radius: 100%;
+  background: #262626;
+}
+.box {
+  color: #333538;
+  font-size: 26px;
+  border-radius: 8px;
+}
+.box.c {
+  background: #36a2eb;
+}
+.box.h {
+  background: #ff6384;
+}
+
+.line-parent .line {
+  background: #333538;
+  z-index: 1;
+}
+
+.line-parent.open {
+  cursor: pointer;
+  z-index: 2;
+}
+
+.game.h .line-parent.open:hover .line {
+  background: #ff6384;
+}
+.game.c .line-parent.open:hover .line {
+  background: #36a2eb;
+}
+
+.line-parent.h .line {
+  background: #ff6384;
+  z-index: 3;
+}
+
+.line-parent.c .line {
+  background: #36a2eb;
+  z-index: 3;
+}
